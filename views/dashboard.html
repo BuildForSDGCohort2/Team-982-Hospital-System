@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> HS | Dashboard </title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <img alt="image" class="rounded-circle" src="img/profile_small.jpg"/>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="block m-t-xs font-bold">Dr. Simon Byamukama</span>
+                                <span class="text-muted text-xs block">Department Director <b class="caret"></b></span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="employee_profiles.html">Employees profiles</a></li>
+                                <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            HS
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
+                        <ul class="nav nav-second-level">
+                            <li class="active"><a href="dashboard.html">Department</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning float-right">16/24</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">Inbox</a></li>
+                            <li><a href="mail_compose.html">Compose email</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-label">Appointments</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="all_appointments.html">New appointments</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Patients</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="all_patients.html">All Patients</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-user-md"></i> <span class="nav-label">Employees</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="all_employees.html">Employees</a></li>
+                            <li><a href="employee_profiles.html">Employees Profiles</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Transactions</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="transactions.html">All transactions </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+                <li>
+                    <a class="right-sidebar-toggle">
+                        <i class="fa fa-tasks"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+            <div class="wrapper wrapper-content">
+        <div class="row">
+                    <div class="col-lg-3">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <span class="label label-success float-left">All</span>
+                                <h5 class="float-right">Appointments</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">200</h1>
+                                <div class="stat-percent font-bold text-success"> Details <i class="fa fa-link"></i></div>
+                                <small> successful ones </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <span class="label label-primary float-left">All</span>
+                                <h5 class="float-right">Cashiers</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">4</h1>
+                                <div class="stat-percent font-bold text-danger"> Details <i class="fa fa-link"></i></div>
+                                <small>Department Cashiers</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <span class="label label-primary float-left">All</span>
+                                <h5 class="float-right">Doctors</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <h1 class="no-margins">34</h1>
+                                <a href="all_employees.html"><div class="stat-percent font-bold text-navy"> Details <i class="fa fa-link"></i></div></a>
+                                <small>Department Doctors</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                <div class="ibox ">
+                    <div class="ibox-title">
+                        <span class="label label-primary float-left">All</span>
+                        <h5 class="float-right">Pharmacists</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <h1 class="no-margins">3</h1>
+                        <div class="stat-percent font-bold text-navy"> Details <i class="fa fa-link"></i></div>
+                        <small>Department pharmacists</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ibox ">
+                            <div class="ibox-title">
+                                <h5>Internal Messages</h5>
+                                <div class="ibox-tools">
+                                    <a class="collapse-link">
+                                        <i class="fa fa-chevron-up"></i>
+                                    </a>
+                                    <a class="close-link">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ibox-content ibox-heading">
+                                <h3><i class="fa fa-envelope-o"></i> Messages</h3>
+                                <small><i class="fa fa-tim"></i>Internal memos and Work emails</small>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="feed-activity-list">
+                                    <div class="feed-element">
+                                        <div>
+                                            <small class="float-right text-navy">1hr ago</small>
+                                            <strong> DR. Monica Nic</strong>
+                                            <div>Remainder for the board meeting today</div>
+                                            <small class="text-muted">Today 3:30 pm - 16.06.2019</small>
+                                        </div>
+                                    </div>
+                                    <div class="feed-element">
+                                        <div>
+                                            <small class="float-right text-navy">1hr 40m ago</small>
+                                            <strong>DR .Sabrina</strong>
+                                            <div>Inquiery about patient AGHS-34-560 </div>
+                                            <small class="text-muted">Today 2:20 pm - 16.06.2019</small>
+                                        </div>
+                                    </div>
+                                    <div class="feed-element">
+                                        <div>
+                                            <small class="float-right text-navy">1hr ago</small>
+                                            <strong>Hospital Management</strong>
+                                            <div>MEMO:: In Two weeks to come we are doing an Audit prepare ur Accounts</div>
+                                            <small class="text-muted">Today 3:60 pm - 16.06.2019</small>
+                                        </div>
+                                    </div>
+                                    <div class="feed-element">
+                                        <div>
+                                            <small class="float-right text-navy">1hr ago</small>
+                                            <strong>Hospital Management</strong>
+                                            <div>MEMO:: In Two weeks to come we are doing an Audit prepare ur Accounts</div>
+                                            <small class="text-muted">Today 3:60 pm - 16.06.2019</small>
+                                        </div>
+                                    </div>
+                                    <div class="feed-element">
+                                        <div>
+                                            <small class="float-right text-navy">1hr ago</small>
+                                            <strong> DR. Monica Nic</strong>
+                                            <div>Remainder for the board meeting today</div>
+                                            <small class="text-muted">Today 3:60 pm - 16.06.2019</small>
+                                        </div>
+                                    </div>
+                                    <div class="feed-element">
+                                        <div>
+                                            <small class="float-right text-navy">1hr 40m ago</small>
+                                            <strong>DR .Sabrina</strong>
+                                            <div>Inquiery about patient AGHS-34-560 </div>
+                                            <small class="text-muted">Today 2:20 pm - 16.06.2019</small>
+                                        </div>
+                                    </div>
+                                    <div class="feed-element">
+                                        <div>
+                                            <small class="float-right text-navy">1hr 40m ago</small>
+                                            <strong>DR .Sabrina</strong>
+                                            <div>Inquiery about patient AGHS-34-560 </div>
+                                            <small class="text-muted">Today 2:20 pm - 16.06.2019</small>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>New Appointments</h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                <i class="fa fa-chevron-up"></i>
+                                            </a>
+                                            <a class="close-link">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content table-responsive">
+                                        <table class="table table-hover no-margins">
+                                            <thead>
+                                            <tr>
+                                                <th>Patient_ID</th>
+                                                <th>Name</th>
+                                                <th>Address</th>
+                                                <th>Reason</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td><small>AGHS-19-2345</small></td>
+                                                <td>Mich Akampurira</td>
+                                                <td>Nkasongola kikyusa village</td>
+                                                <td class="text-dark">Eye check up</td>
+                                            </tr>
+                                            <tr>
+                                                <td><small>AGHS-30-2345</small></td>
+                                                <td>Makuuza Juna</td>
+                                                <td>Kampala kololo</td>
+                                                <td class="text-dark">Eyes are itchy</td>
+                                            </tr>
+                                            <tr>
+                                                <td><small>AGHS-23-2345</small></td>
+                                                <td>Mich linda</td>
+                                                <td>Kampala central</td>
+                                                <td class="text-dark">Select glasses</td>
+                                            </tr>
+                                            <tr>
+                                                <td><small>AGHS-40-2345</small></td>
+                                                <td>Nicole Ayebasibwe</td>
+                                                <td>Kampala central</td>
+                                                <td class="text-dark">Alegies</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <button class="btn btn-primary btn-block m-t"><a class="text-white" href="all_appointments.html"><i class="fa fa-arrow-down"></i> Show More</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>All Patients </h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                <i class="fa fa-chevron-up"></i>
+                                            </a>
+                                            <a class="close-link">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content table-responsive">
+                                        <table class="table table-hover no-margins">
+                                            <thead>
+                                            <tr>
+                                                <th>Patient_ID</th>
+                                                <th>Name</th>
+                                                <th>Address</th>
+                                                <th>Status </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td><small>AGHS-19-2345</small></td>
+                                                <td>Sarah Akampurira</td>
+                                                <td>Kabale heights Apartment 345</td>
+                                                <td class="text-navy"></i><span class="label label-info">Under medication</span> </td>
+                                            </tr>
+                                            <tr>
+                                                <td><small>AGHS-10-2345</small></td>
+                                                <td>Sarah kisakye</td>
+                                                <td>Kabale 7th street </td>
+                                                <td class="text-navy"></i><span class="label label-success">Done medication</span> </td>
+                                            </tr>
+                                            <tr>
+                                                <td><small>AGHS-59-2345</small></td>
+                                                <td>Peter Kawuju</td>
+                                                <td>Able apartments</td>
+                                                <td class="text-navy"></i><span class="label label-info">Under medication</span> </td>
+                                            </tr>
+                                            <tr>
+                                                <td><small>AGHS-19-2301</small></td>
+                                                <td>Sarah themtell</td>
+                                                <td>Ntungamo nyabusozi village </td>
+                                                <td class="text-navy"></i><span class="label label-success">Done medication</span> </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <button class="btn btn-primary btn-block m-t"><a class="text-white" href="all_patients.html"><i class="fa fa-arrow-down"></i> Show More</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="ibox ">
+                                    <div class="ibox-title">
+                                        <h5>Department Transaction</h5>
+                                        <div class="ibox-tools">
+                                            <a class="collapse-link">
+                                                <i class="fa fa-chevron-up"></i>
+                                            </a>
+                                            <a class="close-link">
+                                                <i class="fa fa-times"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="ibox-content">
+
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <table class="table table-hover margin bottom">
+                                                    <thead>
+                                                    <tr>
+                                                        <th style="width: 1%" class="text-center">Invoice No.</th>
+                                                        <th>Details</th>
+                                                        <th class="text-center">Date</th>
+                                                        <th class="text-center">Time</th>
+                                                        <th class="text-center">Amount</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td class="text-center">INV-19-23</td>
+                                                        <td> Consultation
+                                                            </td>
+                                                        <td class="text-center small">16 Jun 2019</td>
+                                                        <td class="text-center small">8:00</td>
+                                                        <td class="text-center"><span class="label label-primary">10000</span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">INV-19-224</td>
+                                                        <td> Eye drops
+                                                        </td>
+                                                        <td class="text-center small">16 Jun 2019</td>
+                                                        <td class="text-center small">11:00</td>
+                                                        <td class="text-center"><span class="label label-primary">10000</span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">INV-19-103</td>
+                                                        <td> GLasses lens
+                                                        </td>
+                                                        <td class="text-center small">16 Jun 2019</td>
+                                                        <td class="text-center small">12:00</td>
+                                                        <td class="text-center"><span class="label label-primary">300000</span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">INV-19-213</td>
+                                                        <td> Frames 5x4x5
+                                                        </td>
+                                                        <td class="text-center small">16 Jun 2019</td>
+                                                        <td class="text-center small">14:00</td>
+                                                        <td class="text-center"><span class="label label-primary">170000</span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">INV-19-2093</td>
+                                                        <td> dyrophoncomcylum adult 8ups
+                                                        </td>
+                                                        <td class="text-center small">16 Jun 2019</td>
+                                                        <td class="text-center small">17:00</td>
+                                                        <td class="text-center"><span class="label label-primary">40000</span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-center">INV-19-293</td>
+                                                        <td>  adult 8ups
+                                                        </td>
+                                                        <td class="text-center small">16 Jun 2019</td>
+                                                        <td class="text-center small">17:10</td>
+                                                        <td class="text-center"><span class="label label-primary">4000</span></td>
+
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        <div class="footer">
+            <div class="float-right">
+                <strong>Copyright</strong> AGHS &copy; 2020
+            </div>
+        </div>
+        </div>
+        <div id="right-sidebar">
+            <div class="sidebar-container">
+
+                <ul class="nav nav-tabs navs-2">
+                    <li>
+                        <a class="nav-link active" data-toggle="tab" href="#tab-1"> Status </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" data-toggle="tab" href="#tab-3"> <i class="fa fa-gear"></i> </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <div id="tab-1" class="tab-pane active">
+
+                        <div class="sidebar-title">
+                            <h3> <i class="fa fa-user-md"></i> Employee status </h3>
+                            <small><i class="fa fa-tim"></i> Welcome </small>
+                        </div>
+
+                        <div>
+
+                            <div class="sidebar-message">
+                                    <div class="media-body">
+                                        feature Still Under developement
+                                        Sorry
+                                        <br>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab-3" class="tab-pane">
+
+                        <div class="sidebar-title">
+                            <h3><i class="fa fa-gears"></i> Settings</h3>
+                        </div>
+                        <div class="sidebar-content">
+                            <h4>Settings</h4>
+                            <div class="small">
+                               This feature is still under implementation
+                                We apologise for the incovinces
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+           console.log('hi how u doing there is more work to do  ::::::::::::;;;')
+        });
+    </script>
+</body>
+</html>

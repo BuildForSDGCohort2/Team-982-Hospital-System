@@ -1,0 +1,25 @@
+{
+  "name": "team-982-hospital-system",
+  "version": "1.0.0",
+  "description": "Hospital Management System ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuildForSDGCohort2/Team-982-Hospital-System.git"
+  },
+  "author": "michael Goboola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BuildForSDGCohort2/Team-982-Hospital-System/issues"
+  },
+  "homepage": "https://github.com/BuildForSDGCohort2/Team-982-Hospital-System#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
