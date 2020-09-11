@@ -23,17 +23,17 @@
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element">
-                            <img alt="image" class="rounded-circle" src="img/profile_small.jpg"/>
+                            <img alt="image" class="rounded-circle" src="../assets/img/profile_small.jpg"/>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="block m-t-xs font-bold">Dr. Simon Byamukama</span>
                                 <span class="text-muted text-xs block">Department Director <b class="caret"></b></span>
                             </a>
                             <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                                <li><a class="dropdown-item" href="profile.html">Profile</a></li>
-                                <li><a class="dropdown-item" href="employee_profiles.html">Employees profiles</a></li>
-                                <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                                <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                                <li><a class="dropdown-item" href="/employee_profiles">Employees profiles</a></li>
+                                <li><a class="dropdown-item" href="/mailbox">Mailbox</a></li>
                                 <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="login.ejs">Logout</a></li>
+                                <li><a class="dropdown-item" href="/logout">Logout</a></li>
                             </ul>
                         </div>
                         <div class="logo-element">
@@ -41,41 +41,41 @@
                         </div>
                     </li>
                     <li class="active">
-                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
+                        <a href="/dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span></a>
                         <ul class="nav nav-second-level">
-                            <li class="active"><a href="dashboard.ejs">Department</a></li>
+                            <li class="active"><a href="/dashboard">Department</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning float-right">16/24</span></a>
+                        <a href="mailbox.ejs"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning float-right">16/24</span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="mailbox.html">Inbox</a></li>
-                            <li><a href="mail_compose.html">Compose email</a></li>
+                            <li><a href="/mailbox">Inbox</a></li>
+                            <li><a href="/mail_compose">Compose email</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-newspaper-o"></i> <span class="nav-label">Appointments</span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="all_appointments.html">New appointments</a></li>
+                            <li><a href="/all_appointments">New appointments</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Patients</span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="all_patients.html">All Patients</a></li>
+                            <li><a href="/all_patients">All Patients</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-user-md"></i> <span class="nav-label">Employees</span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="all_employees.html">Employees</a></li>
-                            <li><a href="employee_profiles.html">Employees Profiles</a></li>
+                            <li><a href="/all_employees">Employees</a></li>
+                            <li><a href="/employee_profiles">Employees Profiles</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-money"></i> <span class="nav-label">Transactions</span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="transactions.html">All transactions </a></li>
+                            <li><a href="/transactions">All transactions </a></li>
                         </ul>
                     </li>
                 </ul>
@@ -91,7 +91,7 @@
         </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <a href="login.ejs">
+                    <a href="/logout">
                         <i class="fa fa-sign-out"></i> Log out
                     </a>
                 </li>
@@ -140,7 +140,7 @@
                             </div>
                             <div class="ibox-content">
                                 <h1 class="no-margins">34</h1>
-                                <a href="all_employees.html"><div class="stat-percent font-bold text-navy"> Details <i class="fa fa-link"></i></div></a>
+                                <a href="all_employees.ejs"><div class="stat-percent font-bold text-navy"> Details <i class="fa fa-link"></i></div></a>
                                 <small>Department Doctors</small>
                             </div>
                         </div>
@@ -296,7 +296,7 @@
                                             </tr>
                                             </tbody>
                                         </table>
-                                        <button class="btn btn-primary btn-block m-t"><a class="text-white" href="all_appointments.html"><i class="fa fa-arrow-down"></i> Show More</a></button>
+                                        <button class="btn btn-primary btn-block m-t"><a class="text-white" href="all_appointments.ejs"><i class="fa fa-arrow-down"></i> Show More</a></button>
                                     </div>
                                 </div>
                             </div>
@@ -350,7 +350,7 @@
                                             </tr>
                                             </tbody>
                                         </table>
-                                        <button class="btn btn-primary btn-block m-t"><a class="text-white" href="all_patients.html"><i class="fa fa-arrow-down"></i> Show More</a></button>
+                                        <button class="btn btn-primary btn-block m-t"><a class="text-white" href="all_patients.ejs"><i class="fa fa-arrow-down"></i> Show More</a></button>
                                     </div>
                                 </div>
                             </div>
