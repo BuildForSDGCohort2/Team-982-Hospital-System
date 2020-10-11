@@ -55,6 +55,10 @@ app.get('/register', (req, res) => {
     res.render('register')
 });
 
+app.get('/data/hospital', (req, res) => {
+    res.json({ "Data": "success" })
+});
+
 app.listen(port, () => {
     console.log(`server running on ${port}`);
 });
