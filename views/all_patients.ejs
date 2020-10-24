@@ -167,79 +167,63 @@
 
     <script>
         $(document).ready(function () {
+            $.get('http://localhost:8080/data/Patients',function(data,status) {
+                  console.log(data.recordset)
+                $("#table_list_2").jqGrid({
+                    url:'http://localhost:8080/data/patients',
+                    data: data.recordset,
+                    datatype: "local",
+                    height: 450,
+                    autowidth: true,
+                    shrinkToFit: true,
+                    rowNum: 20,
+                    rowList: [10, 20, 30],
+                    colNames:['FirstName','LastName', 'Addresses', 'Email','TelePhone','Age','Sex'],
+                    colModel:[
+                        {name:'FirstName',index:'Firstname', editable: true, width:100, sorttype:"string",search:true},
+                        {name:'LastName',index:'Lastname', editable: true, width:100, sorttype:"string", formatter:"String"},
+                        {name:'Addresses',index:'Addresses', editable: true, width:100},
+                        {name:'Email',index:'Email', editable: true, width:200, align:"left",sorttype:"string", formatter:"string"},
+                        {name:'TelePhone',index:'TelePhone', editable: true, width:80, align:"right",sorttype:"int"},
+                        {name:'Age',index:'Age', editable: true, width:100,align:"left",sorttype:"int"},
+                        {name:'Sex',index:'Sex', editable: true, width:100, sortable:false}
+                    ],
+                    pager: "#pager_list_2",
+                    viewrecords: true,
+                    caption: "All Patients",
+                    add: true,
+                    edit: true,
+                    addtext: 'Add',
+                    edittext: 'Edit',
+                    hidegrid: false
+                });
+
+                // Add selection
+                $("#table_list_2").setSelection(4, true);
 
 
-            // Examle data for jqGrid
-            $.get('https://yo-health.azurewebsites.net/data/patients',function(data,status) {
-                  console.log(`we got ${data} and got the status as ${status}`);
-            })
-            var mydata = [
-                {id: "1", invdate: "2010-05-24", name: "test", note: "note", tax: "10.00", total: "2111.00"} ,
-                {id: "2", invdate: "2010-05-25", name: "test2", note: "note2", tax: "20.00", total: "320.00"},
-                {id: "3", invdate: "2007-09-01", name: "test3", note: "note3", tax: "30.00", total: "430.00"},
-                {id: "4", invdate: "2007-10-04", name: "test", note: "note", tax: "10.00", total: "210.00"},
-                {id: "5", invdate: "2007-10-05", name: "test2", note: "note2", tax: "20.00", total: "320.00"},
-                {id: "6", invdate: "2007-09-06", name: "test3", note: "note3", tax: "30.00", total: "430.00"}
-
-            ];
-            // Configuration for jqGrid
-            $("#table_list_2").jqGrid({
-                data: mydata,
-                datatype: "local",
-                height: 450,
-                autowidth: true,
-                shrinkToFit: true,
-                rowNum: 20,
-                rowList: [10, 20, 30],
-                colNames:['Inv No','Date', 'Client', 'Amount','Tax','Total','Notes','added'],
-                colModel:[
-                    {name:'id',index:'id', editable: true, width:60, sorttype:"int",search:true},
-                    {name:'invdate',index:'invdate', editable: true, width:90, sorttype:"date", formatter:"date"},
-                    {name:'name',index:'name', editable: true, width:100},
-                    {name:'amount',index:'amount', editable: true, width:80, align:"right",sorttype:"float", formatter:"number"},
-                    {name:'tax',index:'tax', editable: true, width:80, align:"right",sorttype:"float"},
-                    {name:'total',index:'total', editable: true, width:80,align:"right",sorttype:"float"},
-                    {name:'note',index:'note', editable: true, width:100, sortable:false},
-                    {name:'Added',index:'added', editable: true, width:100, sortable:false}
-                ],
-                pager: "#pager_list_2",
-                viewrecords: true,
-                caption: "All Patients",
-                add: true,
-                edit: true,
-                addtext: 'Add',
-                edittext: 'Edit',
-                hidegrid: false
-            });
-
-            // Add selection
-            $("#table_list_2").setSelection(4, true);
-
-
-            // Setup buttons
-            $("#table_list_2").jqGrid('navGrid', '#pager_list_2',
+                // Setup buttons
+                $("#table_list_2").jqGrid('navGrid', '#pager_list_2',
                     {edit: true, add: true, del: true, search: true},
                     {height: 200, reloadAfterSubmit: true}
-            );
+                );
 
-            // Add responsive to jqGrid
-            $(window).bind('resize', function () {
-                var width = $('.jqGrid_wrapper').width();
-                $('#table_list_1').setGridWidth(width);
-                $('#table_list_2').setGridWidth(width);
-            });
+                // Add responsive to jqGrid
+                $(window).bind('resize', function () {
+                    var width = $('.jqGrid_wrapper').width();
+                    $('#table_list_1').setGridWidth(width);
+                    $('#table_list_2').setGridWidth(width);
+                });
 
+                setTimeout(function(){
+                    $('.wrapper-content').removeClass('animated fadeInRight');
+                },700);
 
-            setTimeout(function(){
-                $('.wrapper-content').removeClass('animated fadeInRight');
-            },700);
+            })
 
         });
 
     </script>
-
-
-
 </body>
 
 </html>
