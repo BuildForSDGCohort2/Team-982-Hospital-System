@@ -165,12 +165,9 @@
 
     <script>
         $(document).ready(function () {
-            $.get('http://localhost:8080/data/Appointments',function(data,status) {
-                console.log(data.recordset)
                 $("#table_list_2").jqGrid({
                     url:'http://localhost:8080/data/Appointments',
-                    data: data.recordset,
-                    datatype: "local",
+                    datatype: "json",
                     height: 400,
                     scroll:true,
                     autowidth: true,
@@ -201,7 +198,8 @@
                     edit: true,
                     addtext: 'Add',
                     edittext: 'Edit',
-                    hidegrid: false
+                    hidegrid: false,
+                    editurl: 'http://localhost:8080/data/Appointments'
                 });
 
                 // Add selection
@@ -225,8 +223,6 @@
                 setTimeout(function(){
                     $('.wrapper-content').removeClass('animated fadeInRight');
                 },700);
-
-            });
         });
 
     </script>

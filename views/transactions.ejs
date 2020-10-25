@@ -171,11 +171,9 @@
 
     <script>
         $(document).ready(function () {
-            $.get('http://localhost:8080/data/Transaction_data',function(data,status) {
-                console.log(data.recordset)
                 $("#table_list_2").jqGrid({
-                    data: data.recordset,
-                    datatype: "local",
+                    url:'http://localhost:8080/data/Transaction_data',
+                    datatype: "json",
                     height: 450,
                     autowidth: true,
                     shrinkToFit: true,
@@ -199,7 +197,8 @@
                     edit: true,
                     addtext: 'Add',
                     edittext: 'Edit',
-                    hidegrid: false
+                    hidegrid: false,
+                    editurl:'http://localhost:8080/data/Transaction_data'
                 });
 
                 // Add selection
@@ -208,7 +207,7 @@
 
                 // Setup buttons
                 $("#table_list_2").jqGrid('navGrid', '#pager_list_2',
-                    {edit: true, add: true, del: true, search: true},
+                    {edit: false, add: false, del: false, search: true},
                     {height: 200, reloadAfterSubmit: true}
                 );
 
@@ -223,9 +222,6 @@
                 setTimeout(function(){
                     $('.wrapper-content').removeClass('animated fadeInRight');
                 },700);
-
-            });
-
         });
 
     </script>

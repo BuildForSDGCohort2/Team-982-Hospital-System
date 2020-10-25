@@ -167,26 +167,26 @@
 
     <script>
         $(document).ready(function () {
-            $.get('http://localhost:8080/data/Patients',function(data,status) {
-                  console.log(data.recordset)
                 $("#table_list_2").jqGrid({
                     url:'http://localhost:8080/data/patients',
-                    data: data.recordset,
-                    datatype: "local",
+                    datatype: "json",
                     height: 450,
                     autowidth: true,
                     shrinkToFit: true,
                     rowNum: 20,
                     rowList: [10, 20, 30],
-                    colNames:['FirstName','LastName', 'Addresses', 'Email','TelePhone','Age','Sex'],
+                    colNames:['Patient_id','FirstName','LastName', 'Addresses', 'Email','TelePhone','Age','Sex','Health_status','Transaction_status'],
                     colModel:[
-                        {name:'FirstName',index:'Firstname', editable: true, width:100, sorttype:"string",search:true},
-                        {name:'LastName',index:'Lastname', editable: true, width:100, sorttype:"string", formatter:"String"},
+                        {name:'Patient_id',index:'Patient_id', editable: true, width:100},
+                        {name:'FirstName',index:'Firstname', editable: true, width:100},
+                        {name:'LastName',index:'Lastname', editable: true, width:100},
                         {name:'Addresses',index:'Addresses', editable: true, width:100},
-                        {name:'Email',index:'Email', editable: true, width:200, align:"left",sorttype:"string", formatter:"string"},
-                        {name:'TelePhone',index:'TelePhone', editable: true, width:80, align:"right",sorttype:"int"},
-                        {name:'Age',index:'Age', editable: true, width:100,align:"left",sorttype:"int"},
-                        {name:'Sex',index:'Sex', editable: true, width:100, sortable:false}
+                        {name:'Email',index:'Email', editable: true, width:200},
+                        {name:'TelePhone',index:'TelePhone', editable: true, width:80},
+                        {name:'Age',index:'Age', editable: true, width:100},
+                        {name:'Sex',index:'Sex', editable: true, width:100},
+                        {name:'Health_status',index:'Health_status', editable: true, width:100},
+                        {name:'Transaction_status',index:'Transaction_status', editable: true, width:100}
                     ],
                     pager: "#pager_list_2",
                     viewrecords: true,
@@ -195,7 +195,8 @@
                     edit: true,
                     addtext: 'Add',
                     edittext: 'Edit',
-                    hidegrid: false
+                    hidegrid: false,
+                    editurl:'http://localhost:8080/data/patients'
                 });
 
                 // Add selection
@@ -218,8 +219,6 @@
                 setTimeout(function(){
                     $('.wrapper-content').removeClass('animated fadeInRight');
                 },700);
-
-            })
 
         });
 
